@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Invitation</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        .invite {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            position: relative;
+            z-index: 2;
+        }
+        h1 {
+            color: #ff4e50;
+        }
+        p {
+            font-size: 18px;
+            color: #333;
+        }
+        .details {
+            font-weight: bold;
+            color: #d6336c;
+        }
+        .decorations {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+        .balloon {
+            position: absolute;
+            width: 50px;
+            height: 70px;
+            background: radial-gradient(circle, #ff6b6b, #ff4e50);
+            border-radius: 50%;
+            animation: float 5s infinite ease-in-out;
+        }
+        .balloon:nth-child(1) { left: 10%; animation-duration: 6s; }
+        .balloon:nth-child(2) { left: 30%; animation-duration: 4.5s; }
+        .balloon:nth-child(3) { left: 50%; animation-duration: 5.5s; }
+        .balloon:nth-child(4) { left: 70%; animation-duration: 4s; }
+        .balloon:nth-child(5) { left: 90%; animation-duration: 6.5s; }
+        @keyframes float {
+            0% { transform: translateY(100vh) scale(0.8); opacity: 0.6; }
+            50% { opacity: 1; }
+            100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="decorations">
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+    </div>
+    <div class="invite">
+        <h1>You're Invited!</h1>
+        <p>Join us in celebrating a special birthday!</p>
+        <p class="details">Date: April 15, 2024<br>Time: 6:00 PM<br>Location: Sunset Gardens, City Palace</p>
+        <p>Come for the fun, stay for the memories!</p>
+    </div>
+</body>
+</html>
